@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Before</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: #0f172a;
+    background: #f8fafc;
+  }
+  /* Fixed desktop width, no fluidity: this is what overflows on a phone. */
+  .wrap { width: 960px; margin: 0 auto; padding: 40px; }
+  .hero { display: flex; gap: 48px; align-items: center; }
+  .shot { width: 520px; height: 320px; border-radius: 16px; flex: none;
+    background: linear-gradient(135deg, #6366f1, #22d3ee); }
+  .hero h1 { font-size: 56px; line-height: 1.05; margin: 0 0 16px; }
+  .hero p { font-size: 20px; color: #475569; margin: 0 0 24px; }
+  .btn {
+    display: inline-block; background: #4f46e5; color: #fff; text-decoration: none;
+    padding: 14px 28px; border-radius: 10px; font-weight: 600; font-size: 18px;
+  }
+  /* Three fixed-width cards forced into one non-wrapping row. */
+  .cards { display: flex; gap: 24px; margin-top: 56px; flex-wrap: nowrap; }
+  .card {
+    width: 300px; background: #fff; border: 1px solid #e2e8f0; border-radius: 16px;
+    padding: 28px; box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  }
+  .card h3 { margin: 0 0 8px; font-size: 22px; }
+  .price { font-size: 40px; font-weight: 700; margin: 8px 0 16px; }
+  .card ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.9; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <h1>Ship interfaces that just fit.</h1>
+        <p>A feature section that was built at one fixed width and never checked on a phone.</p>
+        <a class="btn" href="#">Get started</a>
+      </div>
+      <div class="shot"></div>
+    </section>
+    <section class="cards">
+      <div class="card"><h3>Starter</h3><div class="price">$0</div><ul><li>1 project</li><li>Community support</li><li>Basic analytics</li></ul></div>
+      <div class="card"><h3>Pro</h3><div class="price">$19</div><ul><li>Unlimited projects</li><li>Email support</li><li>Advanced analytics</li></ul></div>
+      <div class="card"><h3>Team</h3><div class="price">$49</div><ul><li>Everything in Pro</li><li>Shared workspaces</li><li>Priority support</li></ul></div>
+    </section>
+  </div>
+</body>
+</html>

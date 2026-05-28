@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>After</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: #0f172a;
+    background: #f8fafc;
+  }
+  /* Fluid container with a sane cap and responsive padding. */
+  .wrap { width: 100%; max-width: 960px; margin: 0 auto; padding: clamp(20px, 5vw, 40px); }
+
+  /* Stacks on mobile, side by side once there's room. */
+  .hero { display: flex; flex-direction: column; gap: 24px; align-items: center; }
+  .hero .copy { min-width: 0; }
+  .shot { width: 100%; max-width: 520px; aspect-ratio: 13 / 8; border-radius: 16px;
+    background: linear-gradient(135deg, #6366f1, #22d3ee); }
+  .hero h1 { font-size: clamp(30px, 7vw, 56px); line-height: 1.08; margin: 0 0 14px; }
+  .hero p { font-size: clamp(16px, 4vw, 20px); color: #475569; margin: 0 0 22px; max-width: 60ch; }
+  .btn {
+    display: inline-block; background: #4f46e5; color: #fff; text-decoration: none;
+    padding: 14px 28px; border-radius: 10px; font-weight: 600; font-size: 18px; min-height: 44px;
+  }
+
+  /* Cards reflow from one column to many instead of overflowing. */
+  .cards {
+    display: grid; gap: 20px; margin-top: clamp(36px, 8vw, 56px);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+  .card {
+    background: #fff; border: 1px solid #e2e8f0; border-radius: 16px;
+    padding: 28px; box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  }
+  .card h3 { margin: 0 0 8px; font-size: 22px; }
+  .price { font-size: 40px; font-weight: 700; margin: 8px 0 16px; }
+  .card ul { margin: 0; padding-left: 18px; color: #475569; line-height: 1.9; }
+
+  @media (min-width: 760px) {
+    .hero { flex-direction: row; gap: 48px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="copy">
+        <h1>Ship interfaces that just fit.</h1>
+        <p>The same section, made mobile-first: fluid widths, type that scales with the screen, and a grid that reflows instead of overflowing.</p>
+        <a class="btn" href="#">Get started</a>
+      </div>
+      <div class="shot"></div>
+    </section>
+    <section class="cards">
+      <div class="card"><h3>Starter</h3><div class="price">$0</div><ul><li>1 project</li><li>Community support</li><li>Basic analytics</li></ul></div>
+      <div class="card"><h3>Pro</h3><div class="price">$19</div><ul><li>Unlimited projects</li><li>Email support</li><li>Advanced analytics</li></ul></div>
+      <div class="card"><h3>Team</h3><div class="price">$49</div><ul><li>Everything in Pro</li><li>Shared workspaces</li><li>Priority support</li></ul></div>
+    </section>
+  </div>
+</body>
+</html>
